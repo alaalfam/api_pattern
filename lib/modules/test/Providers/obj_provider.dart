@@ -17,13 +17,14 @@ class SecondPageProvider extends SafeProvider with APIProvider {
     notifyListeners();
     final scaffoldMessengerState = ScaffoldMessenger.of(context);
     // *** Get the data from the server ***
-    data = await ProfileAPIValidation().getUserInfo(
-        id: '#id',
-        errorHandler: (error) => _apiErrorHandler.getErrorHandler(
-              error: error,
-              showSnackBar: true,
-              scaffoldMessengerState: scaffoldMessengerState,
-            ));
+    data = await ProfileAPIController().getUserInfo(
+      id: '#id',
+      errorHandler: (error) => _apiErrorHandler.getErrorHandler(
+        error: error,
+        showSnackBar: true,
+        scaffoldMessengerState: scaffoldMessengerState,
+      ),
+    );
     hasError = data == null;
     isLoading = false;
     notifyListeners();

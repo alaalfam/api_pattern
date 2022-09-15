@@ -21,7 +21,7 @@ class SnackbarService {
     color: Colors.white,
   );
 
-  void getSuccessSnackBar({
+  void showSuccessSnackBar({
     required ScaffoldMessengerState scaffoldMessengerState,
     required String message,
     Color? color,
@@ -41,7 +41,7 @@ class SnackbarService {
     });
   }
 
-  void getErrorSnackBar({
+  void showErrorSnackBar({
     required ScaffoldMessengerState scaffoldMessengerState,
     required String message,
     Color? color,

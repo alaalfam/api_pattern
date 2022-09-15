@@ -2,8 +2,8 @@ import 'package:api_pattern/Errors/API/api_error_messages.dart';
 import 'package:api_pattern/Errors/error_interface.dart';
 
 class APIException implements ErrorInterface {
-  final String? _message;
-  final String? _prefix;
+  final String _message;
+  final String _prefix;
   APIException(this._message, this._prefix);
 
   @override
@@ -13,7 +13,7 @@ class APIException implements ErrorInterface {
 }
 
 class FetchDataException extends APIException {
-  FetchDataException(String? message)
+  FetchDataException(String message)
       : super(message, "Error During Communication");
 }
 
