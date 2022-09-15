@@ -61,7 +61,7 @@ class APIErrorHandler {
       if (scaffoldMessengerState == null) {
         throw Exception('No scaffold messenger state found!');
       }
-      _snackbarService.getErrorSnackBar(
+      _snackbarService.showErrorSnackBar(
         scaffoldMessengerState: scaffoldMessengerState,
         message: error.toString(),
       );
