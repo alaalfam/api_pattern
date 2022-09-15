@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:api_pattern/Services/API/api_validation_tools.dart';
 import 'package:api_pattern/Validations/API/api_validation.dart';
 
-class ProfileAPIValidation extends APIValidationTools {
+class ProfileAPIController extends APIValidationTools {
   Future<dynamic> getUserInfo({
     required String id,
     required void Function(dynamic e) errorHandler,
